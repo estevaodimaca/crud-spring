@@ -14,19 +14,15 @@ import mz.com.dimasoft.crudspring.repository.CourseRepository;
 @RequestMapping("/api/courses")
 @CrossOrigin("*")
 public class CourseController {
-	
-	
+
 	private final CourseRepository courseRepository;
-	
+
 	public CourseController(CourseRepository courseRepository) {
-		super();
 		this.courseRepository = courseRepository;
 	}
 
-
-
 	@GetMapping
-	public List<Course> list(){
+	public List<Course> list() {
 		return courseRepository.findAll();
 	}
 
